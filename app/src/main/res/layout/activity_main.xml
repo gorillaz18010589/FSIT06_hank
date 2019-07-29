@@ -1,18 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
-
-    <TextView
-        android:layout_width="wrap_content"
+<!--
+//目標出樂透,類別慣例首字大寫,Laout型的都是容器
+xmlns:android="http://schemas.android.com/apk/res/android" ://xmlas指定為app安卓:來源在這段Url
+layout_width="match_parent"://容器的寬度,把爸爸填滿
+layout_height="match_parent"//容器的高度,把爸爸填滿
+<LinearLayout/>:裡面只有兩招,1.垂直,2.水平,但你要跟他講,是必要選項,屬性沒有順序性,這屬性叫
+*所有的原件都有寬高不能少
+orientation="vertical"://取向設置為垂直
+orientation="horizontal"://取向設置為水平
+<Button :按鈕設置
+android:id="@+id/creatlottery"//你有要控制的原件再賦予id,他將會配置一個位置出來,但因為他是首次配置,所以+號代表這個物件首此時體話出來,後面是參數名a_Z
+android:layout_height="wrap_content" :容器依你的文字大小適度調整
+android:text="Lottery"://顯示文字內容,預設是大寫
+android:textAllCaps="false": //預設大寫,false
+android:textSize="24sp"://設定文字大小,sp為自動調整大小
+文字置中方式:
+<TextView //文字區塊大小
+        android:layout_width="match_parent" //因為占了滿版容器
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="1,2,3,4,5,6"
+        android:gravity="center" //gravity講的是我自己讓空間靠中間
+        android:layout_gravity="center"://講的是我在這個容器中的位置調整為中間
+        android:background="#ff0"://設置背景顏色:為黃色
+        android://可以查這個textView有什麼屬性
+        />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+ -->
+    <Button
+        android:id="@+id/creatlottery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lottery"
+        android:textAllCaps="false"
+        android:textSize="24sp"
+        />
+        //第一種文字置中方式
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="1,2,3,4,5,6"-->
+        <!--android:gravity="center"-->
+        <!--/>-->
+
+        <TextView
+            android:id="@+id/textlottery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="#ff0"
+            android:textSize="24sp"
+
+        />
+
+</LinearLayout>
