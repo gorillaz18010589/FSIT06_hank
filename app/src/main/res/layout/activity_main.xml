@@ -12,11 +12,13 @@
 xmlns:android="http://schemas.android.com/apk/res/android" ://xmlas指定為app安卓:來源在這段Url
 layout_width="match_parent"://容器的寬度,把爸爸填滿
 layout_height="match_parent"//容器的高度,把爸爸填滿
+tools:context=".MainActivity">://指定了這個版面給誰要用.叫做相對表示法
 <LinearLayout/>:裡面只有兩招,1.垂直,2.水平,但你要跟他講,是必要選項,屬性沒有順序性,這屬性叫
 *所有的原件都有寬高不能少
 orientation="vertical"://取向設置為垂直
 orientation="horizontal"://取向設置為水平
 <Button :按鈕設置
+android:onClick="creatlottery"://按鈕點下去觸發的事件
 android:id="@+id/creatlottery"//你有要控制的原件再賦予id,他將會配置一個位置出來,但因為他是首次配置,所以+號代表這個物件首此時體話出來,後面是參數名a_Z
 android:layout_height="wrap_content" :容器依你的文字大小適度調整
 android:text="Lottery"://顯示文字內容,預設是大寫
@@ -36,12 +38,12 @@ android:textSize="24sp"://設定文字大小,sp為自動調整大小
 
  -->
     <Button
-        android:id="@+id/creatlottery"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Lottery"
         android:textAllCaps="false"
         android:textSize="24sp"
+        android:onClick="creatlottery"
         />
         //第一種文字置中方式
     <!--<TextView-->
